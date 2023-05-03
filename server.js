@@ -4,6 +4,7 @@ require('dotenv').config();
 const products = require('./routes/products');
 
 const app = express(); 
+const path = require('path');
 
 const start = async function() {
 	try {
