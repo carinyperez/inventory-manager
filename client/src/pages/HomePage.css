@@ -7,11 +7,11 @@ main h1 {
 	font-size: 3rem; 
 }
 
-main p {
+.homepage p {
 	color: #2774BE; 
 	font-size: 2rem; 
 }
-main img {
+.cover-image {
 	position: fixed; 
 	right: 0; 
 	width: 100%; 
