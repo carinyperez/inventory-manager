@@ -1,5 +1,6 @@
 .products{
 	display: flex; 
+	padding: 3rem;
 }
 
 .error {

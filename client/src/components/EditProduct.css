@@ -1,0 +1,23 @@
+.edit-product {
+	margin: 1rem;
+}
+
+.edit-product form {
+	display: flex; 
+	justify-content: space-between;
+}
+
+.edit-product form {
+	margin-bottom: 1rem; 
+}
+
+.edit-product form button {
+	background-color: green;
+	border-radius: 4px; 
+	border-style: none;
+}
+
+
+.error {
+	color: red; 
+}

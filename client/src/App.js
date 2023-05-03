@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import Store from './pages/Store';
 import logo from './tim_logo.svg';
+import Inventory from './pages/Inventory';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
 	  </header>
 	  <Router>
 		<Routes>
-			<Route path='/' element={<HomePage/>} ></Route>
-			<Route path='/store' element={<Store/>}></Route>
+			<Route exact path='/' element={<HomePage/>} ></Route>
+			<Route exact path='/store' element={<Store/>}></Route>
+			<Route exact path='/inventory' element={<Inventory/>}></Route>
 		</Routes>
 	  </Router>
     </div>
