@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios'; 
 import './Inventory.css';
 import EditProduct from '../components/EditProduct';
+import CreateProduct from '../components/CreateProduct';
 
 const Inventory  = () => {
 	const [data, setData] = useState('');
@@ -21,14 +22,16 @@ const Inventory  = () => {
 	}
 
 	return (
-		<div>
-			<h1>Edit your inventory</h1>
+		<div className='inventory'>
 			<section>
+			    <h1>Edit your inventory</h1>
 				{data && data.map(product => <EditProduct key={product._id}product={product}/>)}
 			</section>
 			<section>
-				{error && <p className='error'>{error}</p>}
+			    <h1>Create new product</h1>
+				<CreateProduct/>
 			</section>
+			{error && <p className='error'>{error}</p>}
 		</div>
 	)
 }
