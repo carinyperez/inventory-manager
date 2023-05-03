@@ -6,3 +6,18 @@
 .error {
 	color: red; 
 }
+
+
+.sample-products h1 {
+	text-align: left;
+	padding-left: 1rem; 
+}
+.sample-products ul {
+	list-style:square;
+	text-align: left;
+}
+
+.sample-products li {
+	line-height: 2rem;
+	color: #2774BE; 
+}
