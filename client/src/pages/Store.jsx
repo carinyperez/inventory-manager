@@ -47,7 +47,7 @@ const Store = () => {
 			<section className='sample-products'>
 				<h1>No idea where to start? Here a list of products to sell</h1>
 				<ul>
-					{sampleData && sampleData.map(product => <li>{product.title}</li>)}
+					{sampleData && sampleData.map(product => <li key={product.title}>{product.title}</li>)}
 				</ul>
 			</section>
 		</main>
