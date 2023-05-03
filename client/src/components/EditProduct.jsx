@@ -2,7 +2,7 @@ import axios from 'axios';
 import {useState} from 'react';
 import './EditProduct.css';
 
-const EditProduct = ({product}) => {
+const EditProduct = ({product, deleteProduct}) => {
 	const id = product._id; 
 	const [name, setName] = useState(product.name);
 	const [price, setPrice] = useState(product.price);
@@ -21,6 +21,8 @@ const EditProduct = ({product}) => {
 		}
 	}
 
+
+
 	return (
 		<div className='edit-product'>
 			<form onSubmit={editProduct}>
@@ -33,6 +35,7 @@ const EditProduct = ({product}) => {
 				<label htmlFor='quantity'>Quantity</label>
 				<input type='text' name='quantity' defaultValue={product.quantity} onChange={(e) => setQuantity(e.target.value)}/>
 				<button type='submit'>Save</button>
+				<button type='reset' className='delete' onClick={() => deleteProduct(id)}>Delete</button>
 			</form>
 			{error && <p className='error'>{error}</p>}
 		</div>

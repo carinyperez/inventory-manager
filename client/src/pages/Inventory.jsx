@@ -10,7 +10,7 @@ const Inventory  = () => {
 
 	useEffect(() => {
 		getProducts()
-	}, [])
+	}, [data])
 
 	const getProducts = async() => {
 		try {
@@ -21,11 +21,22 @@ const Inventory  = () => {
 		}
 	}
 
+	const deleteProduct = async(id) => {
+		try {
+			await axios.delete(`/api/v1/products/${id}`); 
+		} catch (error) {
+			setError(error.message);
+			setTimeout(() => {
+				setError('')
+			}, 1000)
+		}
+	}
+
 	return (
 		<div className='inventory'>
 			<section>
 			    <h1>Edit your inventory</h1>
-				{data && data.map(product => <EditProduct key={product._id}product={product}/>)}
+				{data && data.map(product => <EditProduct key={product._id}product={product} deleteProduct={deleteProduct}/>)}
 			</section>
 			<section>
 			    <h1>Create new product</h1>

@@ -20,13 +20,13 @@ const CreateProduct = () => {
 		<div className='create-product'>
 			<form onSubmit={createProduct}>
 				<label htmlFor='name'>Name</label>
-				<input type ='text' name='name' onChange={(e) => setName(e.target.value)}/>
+				<input type ='text' name='name' onChange={(e) => setName(e.target.value)} required/>
 
 				<label htmlFor='price'>Price</label>
-				<input type='text' name='price' onChange={(e) => setPrice(e.target.value)}/>
+				<input type='text' name='price' onChange={(e) => setPrice(e.target.value)} required/>
 				
 				<label htmlFor='quantity'>Quantity</label>
-				<input type='text' name='quantity'  onChange={(e) => setQuantity(e.target.value)}/>
+				<input type='text' name='quantity'  onChange={(e) => setQuantity(e.target.value)} required/>
 				<button type='submit'>Save</button>
 			</form>
 			{error && <p className='error'>{error}</p>}
