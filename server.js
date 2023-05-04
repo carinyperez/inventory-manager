@@ -6,6 +6,8 @@ const products = require('./routes/products');
 const app = express(); 
 const path = require('path');
 
+const notFound = require('./middleware/notFound');
+
 const start = async function() {
 	try {
 		await connectDB(process.env.MONGO_URI);
@@ -26,7 +28,5 @@ app.use(express.json())
 // routes 
 app.use('/api/v1/products', products)
 
-app.get('/*', function(req, res){
-	res.sendFile(path.join(__dirname, 'client/build', index.html))
-})
 
+app.use(notFound)

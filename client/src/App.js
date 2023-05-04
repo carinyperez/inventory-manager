@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import Store from './pages/Store';
 import logo from './tim_logo.svg';
 import Inventory from './pages/Inventory';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
 	  </header>
 	  <Router>
 		<Routes>
-			<Route exact path='/' element={<HomePage/>} ></Route>
-			<Route exact path='/store' element={<Store/>}></Route>
-			<Route exact path='/inventory' element={<Inventory/>}></Route>
+			<Route exact path='/' element={<HomePage/>}/>
+			<Route exact path='/store' element={<Store/>}/>
+			<Route exact path='/inventory' element={<Inventory/>}/>
+			<Route exact path='/*' element={<NotFound/>}/>
 		</Routes>
 	  </Router>
     </div>
