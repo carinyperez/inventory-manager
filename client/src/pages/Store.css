@@ -3,6 +3,12 @@
 	padding: 3rem;
 }
 
+.sample-products {
+	display: flex;
+	flex-direction: column;
+	align-items: auto; 
+}
+
 .error {
 	color: red; 
 }

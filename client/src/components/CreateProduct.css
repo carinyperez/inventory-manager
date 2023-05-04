@@ -7,7 +7,7 @@
 
 .create-product form {
 	display: flex; 
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .create-product form {

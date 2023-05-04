@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require('./db/connect');
 require('dotenv').config();
 const products = require('./routes/products');
+const email = require('./routes/email');
 
 const app = express(); 
 const path = require('path');
@@ -27,6 +28,7 @@ app.use(express.json())
 
 // routes 
 app.use('/api/v1/products', products)
+app.use('/email', email)
 
 app.get('/*', function(req, res) {
 	res.sendFile(path.join(__dirname, 'client/build', 'index.html'))

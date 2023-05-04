@@ -4,7 +4,7 @@
 
 .edit-product form {
 	display: flex; 
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .edit-product form {
@@ -24,4 +24,8 @@
 
 .delete {
 	background-color: red !important;
+}
+
+.input-name {
+	width: 10vw;
 }

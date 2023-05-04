@@ -10,3 +10,7 @@
 .error {
 	color: red; 
 }
+
+form input {
+	width: 5vw;
+}

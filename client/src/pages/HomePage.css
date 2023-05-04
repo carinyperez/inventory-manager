@@ -1,6 +1,5 @@
 .homepage {
 	margin: 2rem;
-	display: inline-block;
 }
 
 
@@ -9,8 +8,7 @@
 	font-size: 2rem; 
 }
 .cover-image {
-	position: fixed; 
-	right: 0; 
+	position: absolute; 
+	right: 0;
 	width: 100vw; 
-	display: block; 
 }

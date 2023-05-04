@@ -20,7 +20,7 @@ const CreateProduct = () => {
 		<div className='create-product'>
 			<form onSubmit={createProduct}>
 				<label htmlFor='name'>Name</label>
-				<input type ='text' name='name' onChange={(e) => setName(e.target.value)} required/>
+				<input type ='text' name='name' onChange={(e) => setName(e.target.value)} required className='input-name'/>
 
 				<label htmlFor='price'>Price</label>
 				<input type='text' name='price' onChange={(e) => setPrice(e.target.value)} required/>

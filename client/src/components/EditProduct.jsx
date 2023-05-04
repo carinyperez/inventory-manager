@@ -27,7 +27,7 @@ const EditProduct = ({product, deleteProduct}) => {
 		<div className='edit-product'>
 			<form onSubmit={editProduct}>
 				<label htmlFor='name'>Name</label>
-				<input type ='text' name='name' defaultValue={product.name} onChange={(e) => setName(e.target.value)}/>
+				<input type ='text' name='name' defaultValue={product.name} onChange={(e) => setName(e.target.value)} className='input-name'/>
 
 				<label htmlFor='price'>Price</label>
 				<input type='text' name='price' defaultValue={product.price} onChange={(e) => setPrice(e.target.value)}/>
