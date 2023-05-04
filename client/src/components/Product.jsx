@@ -5,6 +5,7 @@ import {useState} from 'react';
 const Product = ({product}) => {
 	const [text, setText] = useState('Add to cart'); 
 	const [error, setError] = useState('');
+	const [quantity, setQuantity] = useState('')
 
 	const sendEmail = async () => {
 		try {
@@ -25,8 +26,7 @@ const Product = ({product}) => {
 			const {name, price} = product; 
 			const id = product._id; 
 			const quantity = 0; 
-			const res = await axios.patch(`/api/v1/products/${id}`, {name, price, quantity});
-			console.log(res);
+			await axios.patch(`/api/v1/products/${id}`, {name, price, quantity});
 		} catch (error) {
 			setError(error.message);
 			setTimeout(() => {
@@ -38,6 +38,7 @@ const Product = ({product}) => {
 	const addToCart = () => {
 		sendEmail()
 		editProduct(); 
+		setQuantity(0);
 	}
 
 	return (
@@ -48,7 +49,7 @@ const Product = ({product}) => {
 				<p className='product-price'>{`$ ${product.price}`}</p>
 				<p>Qty: {product.quantity} </p>
 				{
-					(product.quantity === 0) ? 
+					(quantity === 0 || product.quantity === 0) ? 
 					<button className='out-of-stock'>Out of stock</button> : 
 					<button onClick={(e) => addToCart()} className='add-to-cart'>{text}</button>
 				}

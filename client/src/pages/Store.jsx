@@ -39,7 +39,7 @@ const Store = () => {
 	return (
 		<main>
 			<section className='products'>
-				{data && data.map(product => <Product product={product} />)}
+				{data && data.map(product => <Product key={product.name} product={product} />)}
 			</section>
 			<section>
 			{error && <p className='error'>{error}</p>}
