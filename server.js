@@ -28,5 +28,8 @@ app.use(express.json())
 // routes 
 app.use('/api/v1/products', products)
 
+app.get('/*', function(req, res) {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+})
 
 app.use(notFound)
